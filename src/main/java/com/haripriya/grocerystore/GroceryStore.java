@@ -49,6 +49,8 @@ public class GroceryStore {
         Item potatoes = new Item(202, "Potatoes", 22.65, 100);
         veggies.addItem(capsicum);
         veggies.addItem(potatoes);
+        // Discount for all veggies (group-level discount)
+        veggies.setGroupDiscount(8.5);
         
         // Dairy
         Item amul = new Item(301, "Amul 1 litre milk", 70, 100);
@@ -105,7 +107,7 @@ public class GroceryStore {
             System.out.println(reg.checkout(order, this.SENIOR_DISCOUNT));
         }
         else{
-            System.out.println(reg.checkout(order));
+            System.out.println(reg.checkout(order, 0));
         }
     }
     
